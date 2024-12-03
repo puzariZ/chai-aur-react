@@ -4,16 +4,18 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  // const [counter, setCounter] = useState(10);
-  let counter = 10;
+  let [counter, setCounter] = useState(10);
+  // let counter = 10;
 
   const addValue = () => {
-    counter = counter + 1;
+    // counter = counter + 1;
+    setCounter(counter+1);
     console.log("counter pressed",counter,Math.random() * 100);
   };
 
   const decValue = () => {
-    counter = counter - 1;
+    // counter = counter - 1;
+    setCounter(counter-1);
     console.log("counter pressed",counter,Math.random() * 100);
   };
 
@@ -25,7 +27,7 @@ function App() {
     <br />
     <br />
     <button onClick={decValue}>Decrease_Counter {counter}</button>
-    <h3>footer {counter}</h3>
+    <p>footer {counter}</p>
     </>
   )
 }
